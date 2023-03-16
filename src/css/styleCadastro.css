@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.containerCadastro {
+  border: solid rgb(193, 193, 193) 1px;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+
+.inputCadastro {
+  display: block;
+  padding: 7px 0;
+  margin: 10px auto;
+}
