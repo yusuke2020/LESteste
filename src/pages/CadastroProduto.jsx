@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../css/styleCadastro.css";
 import { Header } from "../components/header";
+import Axios from "axios";
 
 export default function CadastroProduto() {
   const [valores, setValores] = useState();
@@ -12,7 +13,14 @@ export default function CadastroProduto() {
   };
 
   const aoClicarBtnCadastro = () => {
-    console.log(valores);
+    Axios.post("http://localhost:3001/registroProd", {
+      nome: valores.nome,
+      valor: valores.valor,
+      categoria: valores.categoria,
+      qtde: valores.qtde,
+    }).then((resposta) => {
+      console.log(resposta);
+    });
   };
 
   const newLocal = (
