@@ -8,6 +8,7 @@ export const Vitrine = styled.div`
   align-items: center;
   margin-bottom: 70px;
   margin-top: 30px;
+  font-family: "Quicksand", sans-serif;
 
   div {
     height: 320px;

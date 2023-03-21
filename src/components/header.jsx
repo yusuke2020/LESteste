@@ -27,6 +27,7 @@ export const Header = () => {
       <Link to="/">Loja</Link>
       <Link to="/carrinho">Carrinho</Link>
       <Link to="/cadastroProdutos">Cadastro de Produtos</Link>
+      <Link to="/cadastroClientes">Cadastro de Clientes</Link>
     </Top>
   );
 };

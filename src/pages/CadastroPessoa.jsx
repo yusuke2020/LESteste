@@ -3,7 +3,7 @@ import "../css/styleCadastro.css";
 import { Header } from "../components/header";
 import Axios from "axios";
 
-export default function CadastroProduto() {
+export default function CadastroPessoa() {
   const [valores, setValores] = useState({});
 
   const mudarValores = (valor) => {
@@ -14,7 +14,7 @@ export default function CadastroProduto() {
   };
 
   const aoClicarBtnCadastro = () => {
-    Axios.post("http://localhost:3001/registroProd", valores)
+    Axios.post("http://localhost:3001/registroCli", valores)
       .then((resposta) => {
         console.log(resposta);
       })
@@ -28,32 +28,35 @@ export default function CadastroProduto() {
       <Header />
       <div className="container">
         <div className="containerCadastro">
-          <h1>Cadastro de produtos</h1>
+          <h1>Cadastro de clientes</h1>
+          Nome
           <input
             type="text"
             name="nome"
-            placeholder="Nome do Produto"
+            placeholder="Nome"
             className="inputCadastro"
             onChange={mudarValores}
           />
+          Data de nascimento
           <input
-            type="text"
-            name="valor"
-            placeholder="Preço"
+            type="date"
+            name="nascimento"
             className="inputCadastro"
             onChange={mudarValores}
           />
+          E-mail
           <input
             type="text"
-            name="categoria"
-            placeholder="Categoria"
+            name="email"
+            placeholder="E-mail"
             className="inputCadastro"
             onChange={mudarValores}
-          />
+          />{" "}
+          CPF
           <input
             type="text"
-            name="qtde"
-            placeholder="Quantidade"
+            name="CPF"
+            placeholder="CPF"
             className="inputCadastro"
             onChange={mudarValores}
           />
